@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnCalcImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#8620FA"
+        android:padding="20dp"
+        android:text="CALCULAR"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewAlturaImc"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txtViewAlturaImc" />
+
+    <EditText
+        android:id="@+id/txtViewAlturaImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/edittext_background"
+        android:ems="15"
+        android:hint="Ex: 1,72"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="#5C5C5C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <EditText
+        android:id="@+id/txtViewPesoImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edittext_background"
+        android:ems="15"
+        android:hint="Ex: 65"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="#5C5C5C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewAlturaImc" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Insira sua altura (metros)"
+        android:textAlignment="viewStart"
+        android:textColor="#707070"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewAlturaImc"
+        app:layout_constraintStart_toStartOf="@+id/txtViewAlturaImc" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Insira seu peso (kg)"
+        android:textAlignment="viewStart"
+        android:textColor="#707070"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewPesoImc"
+        app:layout_constraintStart_toStartOf="@+id/txtViewPesoImc" />
+
+    <TextView
+        android:id="@+id/txtResultImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgImc"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewPesoImc"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="@+id/txtViewPesoImc"
+        tools:text="19,45" />
+
+    <ImageView
+        android:id="@+id/imgImc"
+        android:layout_width="0dp"
+        android:layout_height="94dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcImc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPesoImc"
+        app:srcCompat="@mipmap/result_normal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
